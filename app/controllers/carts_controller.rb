@@ -1,51 +1,47 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :update, :destroy]
 
-  # GET /carts
-  def index
-    @carts = Cart.all
+  # include action called remove_item_from_cart
+  # receives params of the item id. searches current_cart.items
+  # removes it from array, then renders an updated cart
+  def add_item_to_cart
+      item = Item.find(params["item"]["id"]) if params["item"]["id"]
+      if cookies[:cart_id]
+          if check_cart_cookie
+              current_cart.items << item 
+              current_cart.save
+          end
+      else 
+          cart = Cart.create 
+          session[:cart_id] = cart.id
+          cookies[:cart_id] = cart.id
+          current_cart.items << item 
+          current_cart.save
+      end 
 
-    render json: @carts
+      render json: {
+          cart: {
+              id: current_cart.id,
+              items: current_cart.items,
+              total: current_cart_total
+          }
+      }  
   end
 
-  # GET /carts/1
-  def show
-    render json: @cart
+  def remove_item_from_cart
+      item = Item.find(params[:item][:itemId])
+   
+      if check_cart_cookie && params[:cart_id].to_i == current_cart.id
+          # check to see that the cart claimed in cookie is actually referring to the current_cart
+          current_cart.items.delete(item)
+          current_cart.save
+      end
+      
+      render json: {
+          cart: {
+              id: current_cart.id,
+              items: current_cart.items,
+              total: current_cart_total
+          }
+      }  
   end
-
-  # POST /carts
-  def create
-    @cart = Cart.new(cart_params)
-
-    if @cart.save
-      render json: @cart, status: :created, location: @cart
-    else
-      render json: @cart.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /carts/1
-  def update
-    if @cart.update(cart_params)
-      render json: @cart
-    else
-      render json: @cart.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /carts/1
-  def destroy
-    @cart.destroy
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart
-      @cart = Cart.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def cart_params
-      params.fetch(:cart, {})
-    end
 end
