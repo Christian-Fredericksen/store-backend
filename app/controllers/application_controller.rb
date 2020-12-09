@@ -17,5 +17,13 @@ class ApplicationController < ActionController::API
         
         true if cookie_cart_id == session[:cart_id].to_s
     end
+
+    def setup_new_cart
+        new_cart = Cart.create 
+        new_cart.user = current_user if current_user
+        new_cart.save
+        session[:cart_id] = new_cart.id
+        cookies[:cart_id] = new_cart.id 
+    end
     
 end
