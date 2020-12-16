@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   post '/carts', to: 'carts#add_item_to_cart'
   post '/orders', to: 'orders#create'
-
+  post '/signup', to: 'user#create'
   delete '/carts/:cart_id', to: 'carts#remove_item_from_cart'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
