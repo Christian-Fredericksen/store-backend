@@ -1,20 +1,17 @@
 class OrdersController < ApplicationController
   def create
-        
-    if check_cart_cookie
-      order = Order.new
-      order.cart = current_cart
-      order.save
-      setup_new_cart
-    end
+    current_cart = Cart.all
+    order_items = current_cart.last.items
+    a = order_items.each { |key, value| puts "k: #{key}, v: #{value}" }
+
+    setup_new_cart
     
     render json: {
-      cart: {
-        id: current_cart ? current_cart.id : "",
-        items: current_cart ? current_cart.items : [],
+      order: {
+        id:  current_cart,
+        items: a,
         total: current_cart ?  current_cart_total : 0
       }
     }
-
   end
 end
