@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
                 cart: {
                     id: current_cart.id,
                     items: current_cart.items,
-                    total: current_cart_total
+                    # total: current_cart_total
                 }
             }
         end
