@@ -12,27 +12,27 @@
   items = Item.create([
       { name: 'Santa Mickey',
       description: 'Santa Mickies & Minnies on a purple background accented with wreaths, candy canes, stars, and ornaments.',
-      image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123138156_10221462370262877_5063742317812069203_n.jpg?_nc_cat=100&ccb=2&_nc_sid=a83260&_nc_ohc=kMMsnP17Z_sAX8jbgGg&_nc_ht=scontent-lax3-1.xx&oh=4be0acdc8a165021d94b7073f1401c1b&oe=5FFA1277',
+      image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123138156_10221462370262877_5063742317812069203_n.jpg?_nc_cat=100&ccb=2&_nc_sid=a83260&_nc_ohc=LqPPnECQZE4AX-5iNyt&_nc_ht=scontent-lax3-1.xx&oh=a6093eddd6936d8f2bdf8423e1f0e08f&oe=602D7CF7',
       price: '$25' },
 
       { name: 'Hallmark and Chill',
       description: 'A shades of red wrapping paper background with images of ginger bread men, gnomes and other things Hallmark Christmasy.',
-      image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123325063_10221462370982895_5350809058744595815_n.jpg?_nc_cat=111&ccb=2&_nc_sid=a83260&_nc_ohc=d8-PqubOlFIAX9SZyHD&_nc_oc=AQlez9iHyCI307cTZlQ-s6PJZ2mulxvynykuySRSGHoycownuZUGOKz9a8klwvGrHSGh-o93ZVqD4Q-fENyPuEFM&_nc_ht=scontent-lax3-2.xx&oh=fb2d51f4256dab13e68d2f938297189e&oe=5FF8FE54',
+      image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123325063_10221462370982895_5350809058744595815_n.jpg?_nc_cat=111&ccb=2&_nc_sid=a83260&_nc_ohc=wQGxGSyNFdwAX-4sgV0&_nc_oc=AQmhbA7oc7D9zAikk3_zrcU1TM1qrLfaR7eLeuAQFSX126XnD5q09s-6bq0KNH2HiJU4EIikgP0KbzQTmwhYXRJ8&_nc_ht=scontent-lax3-2.xx&oh=02c2c4b1414f0547d24b5407cbedca68&oe=602C68D4',
       price: '$25' },
 
       { name: 'How Sweet It Is',
       description: 'In a tin of peppermint candies.',
-      image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123224885_10221462370902893_7250087394513340578_n.jpg?_nc_cat=102&ccb=2&_nc_sid=a83260&_nc_ohc=bS-KMAzrCYkAX-S2d7P&_nc_ht=scontent-lax3-1.xx&oh=92810c3adfe73d05d3756b90ae558dea&oe=5FF793C5',
+      image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123224885_10221462370902893_7250087394513340578_n.jpg?_nc_cat=102&ccb=2&_nc_sid=a83260&_nc_ohc=Sjl2wDycc-AAX9jnHiM&_nc_ht=scontent-lax3-1.xx&oh=453d540d9c7d9e2b2fcacbd6de88cac6&oe=602EF2C5',
       price: '$25' },
 
       { name: 'Retro Decko the Halls',
       description: 'A variety of whimiscal throwback Christmas tree designs on a black background.',
-      image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123219379_10221462370342879_5296634749869254043_n.jpg?_nc_cat=111&ccb=2&_nc_sid=a83260&_nc_ohc=4TdeZqiPnrkAX9srCT0&_nc_ht=scontent-lax3-2.xx&oh=3a93c1de0bf08f5bb3423202365053f3&oe=5FF88CBF',
+      image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123219379_10221462370342879_5296634749869254043_n.jpg?_nc_cat=111&ccb=2&_nc_sid=a83260&_nc_ohc=Upl7OvpN4_EAX_B72k_&_nc_ht=scontent-lax3-2.xx&oh=5b3c7a35e298157ad0377d4413b536e6&oe=602BF73F',
       price: '$25' },
 
       { name: 'Christmas Penguins',
       description: 'Penguins with Santa hats on a frosty blue background with snowflakes.',
-      image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123251606_10221462371942919_266028675923734303_n.jpg?_nc_cat=110&ccb=2&_nc_sid=a83260&_nc_ohc=fBIiQuR-siIAX8qs5w8&_nc_ht=scontent-lax3-1.xx&oh=62338dce089ce96af3dce820fe9fb583&oe=5FF9754D',
+      image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123251606_10221462371942919_266028675923734303_n.jpg?_nc_cat=110&ccb=2&_nc_sid=a83260&_nc_ohc=9155vQqkh_kAX_rGTiW&_nc_ht=scontent-lax3-1.xx&oh=a7586e81930de4b3cd81761210266f43&oe=602CDFCD',
       price: '$25' }
     
     ])
