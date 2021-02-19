@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_09_192658) do
+ActiveRecord::Schema.define(version: 2021_02_18_193133) do
 
-  create_table "cart_items", force: :cascade do |t| 
+  create_table "cart_items", force: :cascade do |t|
     t.integer "cart_id"
     t.integer "item_id"
     t.datetime "created_at", precision: 6, null: false
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 2020_12_09_192658) do
     t.index ["cart_id"], name: "index_orders_on_cart_id"
   end
 
+  create_table "testimonials", force: :cascade do |t|
+    t.string "testimonial"
+    t.integer "user_id", null: false
+    t.integer "item_id", null: false
+    t.index ["item_id"], name: "index_testimonials_on_item_id"
+    t.index ["user_id"], name: "index_testimonials_on_user_id"
+  end
+
   create_table "user_carts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "cart_id"
@@ -63,6 +71,8 @@ ActiveRecord::Schema.define(version: 2020_12_09_192658) do
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "items"
   add_foreign_key "orders", "carts"
+  add_foreign_key "testimonials", "items"
+  add_foreign_key "testimonials", "users"
   add_foreign_key "user_carts", "carts"
   add_foreign_key "user_carts", "users"
 end
