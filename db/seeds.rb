@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-testimonials = Testimonial.create(
+testimonials = Testimonial.create([
   { testimonial: 'These are the most comfortable leggings ever!',
   item_id: 1,
   user_id: 1 },
@@ -59,7 +59,7 @@ testimonials = Testimonial.create(
   item_id: 5,
   user_id: 3 },
 
-)
+])
 
 items = Item.create([
     { name: 'Santa Mickey',
@@ -69,7 +69,7 @@ items = Item.create([
 
     { name: 'Hallmark and Chill',
     description: 'A shades of red wrapping paper background with images of ginger bread men, gnomes and other things Hallmark Christmasy.',
-    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123325063_10221462370982895_5350809058744595815_n.jpg?_nc_cat=111&ccb=2&_nc_sid=a83260&_nc_ohc=wQGxGSyNFdwAX-4sgV0&_nc_oc=AQmhbA7oc7D9zAikk3_zrcU1TM1qrLfaR7eLeuAQFSX126XnD5q09s-6bq0KNH2HiJU4EIikgP0KbzQTmwhYXRJ8&_nc_ht=scontent-lax3-2.xx&oh=02c2c4b1414f0547d24b5407cbedca68&oe=602C68D4',
+    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123325063_10221462370982895_5350809058744595815_n.jpg?_nc_cat=111&ccb=3&_nc_sid=a83260&_nc_ohc=KvpAybrHMpYAX-HLSu6&_nc_oc=AQlxQd51urQu-jtNwym_CIl4D6qs-62tvbS4x0fEuGMHeShSka3nVyt0dl5o-TtkLa6aLdf1iZbrR7AUAgvwMqDP&_nc_ht=scontent-lax3-2.xx&oh=d193a0aa5c5f0b8d2b667a8bc4aa6c69&oe=6057EA54',
     price: '$25' },
 
     { name: 'How Sweet It Is',
@@ -79,12 +79,12 @@ items = Item.create([
 
     { name: 'Retro Decko the Halls',
     description: 'A variety of whimiscal throwback Christmas tree designs on a black background.',
-    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123219379_10221462370342879_5296634749869254043_n.jpg?_nc_cat=111&ccb=2&_nc_sid=a83260&_nc_ohc=Upl7OvpN4_EAX_B72k_&_nc_ht=scontent-lax3-2.xx&oh=5b3c7a35e298157ad0377d4413b536e6&oe=602BF73F',
+    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/123219379_10221462370342879_5296634749869254043_n.jpg?_nc_cat=111&ccb=3&_nc_sid=a83260&_nc_ohc=o2jXLVIWXU4AX_hzZ4G&_nc_ht=scontent-lax3-2.xx&oh=675005da891dcfdb8f09a729da1fc75b&oe=605778BF',
     price: '$25' },
 
     { name: 'Christmas Penguins',
     description: 'Penguins with Santa hats on a frosty blue background with snowflakes.',
-    image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123251606_10221462371942919_266028675923734303_n.jpg?_nc_cat=110&ccb=2&_nc_sid=a83260&_nc_ohc=9155vQqkh_kAX_rGTiW&_nc_ht=scontent-lax3-1.xx&oh=a7586e81930de4b3cd81761210266f43&oe=602CDFCD',
+    image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/123251606_10221462371942919_266028675923734303_n.jpg?_nc_cat=110&ccb=3&_nc_sid=a83260&_nc_ohc=fkLzGiVpAIIAX8KleUx&_nc_ht=scontent-lax3-1.xx&oh=6f8a252341b051c4195561721f1b65f1&oe=6058614D',
     price: '$25' }
   
   ])
